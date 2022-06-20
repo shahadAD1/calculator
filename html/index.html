@@ -1,12 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            calculator
-        </title> 
-    </head>
-    <body>
-        <p>hello world </p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  <body>
+    <div class="container">
+       <div class="row">
+           <div class="col">
+               <form action="#" name="calculator" class="Calculator">
+                   <!-- to show user input -->
+                   <input type="text" name="dispaly"  id="display" value=" " ><br>
+                   <button type="button" class="btn btn-primary" id="AC" onclick="clearInput()" >AC</button>
+                   <button type="button" class="btn btn-primary" onclick="toggleNegativePositive()">+/-</button>
+                   <button type="button" class="btn btn-primary" onclick="remainder()">%</button>
+                   <button type="button" class="btn btn-primary" onclick="division()">÷</button><br>
+                   <button type="button" class="btn btn-primary number" onclick="numberSeven()">7</button>
+                   <button type="button" class="btn btn-primary number" onclick="numberEight()">8</button>
+                   <button type="button" class="btn btn-primary number" onclick="numberNine()">9</button>
+                   <button type="button" class="btn btn-primary" onclick="multiply()">×</button><br>
+                   <button type="button" class="btn btn-primary number" onclick="numberFour()">4</button>
+                   <button type="button" class="btn btn-primary number" onclick="numberFive()">5</button>
+                   <button type="button" class="btn btn-primary number" onclick="numberSix()">6</button>
+                   <button type="button" class="btn btn-primary" onclick="subtraction()">-</button><br>
+                   <button type="button" class="btn btn-primary number" onclick="numberOne()">1</button>
+                   <button type="button" class="btn btn-primary number" onclick="numberTow()">2</button>
+                   <button type="button" class="btn btn-primary number" onclick="numberThree()">3</button>
+                   <button type="button" class="btn btn-primary" onclick="addition()">+</button><br>
+                   <button type="button" class="btn btn-primary number" id="numberzero" onclick="numberZero()">0</button>
+                   <button type="button" class="btn btn-primary"onclick="point()">.</button>
+                   <button type="button" class="btn btn-primary" onclick="showResult()">=</button>
 
-    </body>
+                  
+               </form>
+               <!-- end col -->
+           </div>
+           <!-- end rwo -->
+       </div>
+       <!-- end container -->
+    </div> 
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
 </html>
