@@ -1,25 +1,21 @@
-body {
-    background-color: white;
-  }
-  h1 {
-    color: blue;
-  }
-  p {
-    color: black;
-  }
-  input{
-    height: 50px;
-    width: 220px;
+
+  #display{
+    /* height: 50px;
+    width: 220px; */
     margin: 2px;
   }
-  button{
+  /* 
+  button, .clearButton{
     height: 50px;
     width: 50px;
     margin: 2px;
   }
-  #numberzero{
+  /* #numberzero{
     width: 108px;
-  }
+  } */
   .number{
     background-color: gray;
   }
+  /* .Calculator{
+    background-color: orangered;
+  } */ 
