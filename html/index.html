@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -14,29 +14,43 @@
            <div class="col">
                <form action="#" name="calculator" class="Calculator">
                    <!-- to show user input -->
-                   <input type="text" name="dispaly"  id="display" value=" " ><br>
-                   <button type="button" class="btn btn-primary" id="AC" onclick="clearInput()" >AC</button>
-                   <button type="button" class="btn btn-primary" onclick="toggleNegativePositive()">+/-</button>
-                   <button type="button" class="btn btn-primary" onclick="remainder()">%</button>
-                   <button type="button" class="btn btn-primary" onclick="division()">÷</button><br>
-                   <button type="button" class="btn btn-primary number" onclick="numberSeven()">7</button>
-                   <button type="button" class="btn btn-primary number" onclick="numberEight()">8</button>
-                   <button type="button" class="btn btn-primary number" onclick="numberNine()">9</button>
-                   <button type="button" class="btn btn-primary" onclick="multiply()">×</button><br>
-                   <button type="button" class="btn btn-primary number" onclick="numberFour()">4</button>
-                   <button type="button" class="btn btn-primary number" onclick="numberFive()">5</button>
-                   <button type="button" class="btn btn-primary number" onclick="numberSix()">6</button>
-                   <button type="button" class="btn btn-primary" onclick="subtraction()">-</button><br>
-                   <button type="button" class="btn btn-primary number" onclick="numberOne()">1</button>
-                   <button type="button" class="btn btn-primary number" onclick="numberTow()">2</button>
-                   <button type="button" class="btn btn-primary number" onclick="numberThree()">3</button>
-                   <button type="button" class="btn btn-primary" onclick="addition()">+</button><br>
-                   <button type="button" class="btn btn-primary number" id="numberzero" onclick="numberZero()">0</button>
-                   <button type="button" class="btn btn-primary"onclick="point()">.</button>
-                   <button type="button" class="btn btn-primary" onclick="showResult()">=</button>
-
-                  
+                   <input type="text" name="dispaly"  id="display" value=" " onkeypress="return isNumberKey(event)" onchange="changeClearButtonNmae()"  data-bs-toggle="collapse" href="#showButtons"><br>
+                   <div class="collapse" id="showButtons">
+                    <div class="btn-group-vertical">
+                    <div class="btn-group me-3" role="group" aria-label="Second group">
+                   <!-- <input class="btn btn-primary clearButton" type="button"  id="AC" onclick="clearInput()" value="AC"> -->
+                   <button type="button" class="btn btn-secondary" id="AC" onclick="clearInput()" >AC</button>
+                   <button type="button" class="btn btn-secondary" onclick="toggleNegativePositive()">+/-</button>
+                   <button type="button" class="btn btn-secondary" onclick="writeOpreator('%')">%</button>
+                   <button type="button" class="btn btn-secondary" onclick="writeOpreator('/')">÷</button>
+                    </div>
+                   <div class="btn-group me-3" role="group" aria-label="Second group">
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('7')">7</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('8')">8</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('9')">9</button>
+                   <button type="button" class="btn btn-secondary" onclick="writeOpreator('*')">×</button>
+                   </div>
+                   <div class="btn-group me-3" role="group" aria-label="Second group">
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('4')">4</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('5')">5</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('6')">6</button>
+                   <button type="button" class="btn btn-secondary" onclick="writeOpreator('-')">-</button>
+                </div>
+                <div class="btn-group me-3" role="group" aria-label="Second group">
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('1')">1</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('2')">2</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('4')">3</button>
+                   <button type="button" class="btn btn-secondary" onclick="writeOpreator('+')">+</button>
+                </div>
+                <div class="btn-group me-3" role="group" aria-label="Second group">
+                   <button type="button" class="btn btn-secondary number" id="numberzero" onclick="writeNumber('0')">0</button>
+                   <button type="button" class="btn btn-secondary"onclick="writeOpreator('.')">.</button>
+                   <button type="button" class="btn btn-secondary" onclick="showResult()" >=</button>
+                </div>
+                   </div>
+                </div>
                </form>
+              
                <!-- end col -->
            </div>
            <!-- end rwo -->
