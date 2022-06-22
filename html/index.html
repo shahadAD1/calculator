@@ -11,51 +11,54 @@
   </head>
   <body>
     <div class="container">
-       <div class="row">
-           <div class="col">
+     
                <form action="#" name="calculator" class="Calculator">
                    <!-- to show user input -->
-                   <input type="text" name="dispaly"  id="display" value=" " onkeypress="return isNumberKey(event)" onchange="changeClearButtonNmae()"  data-bs-toggle="collapse" href="#showButtons"><br>
+                   <input type="text" name="dispaly"  id="display" value=" " onkeypress="return isNumberKey(event)" oninput="changeBtnAttrbuit()"  data-bs-toggle="collapse" href="#showButtons"><br>
                    <div class="collapse" id="showButtons">
-                    <div class="btn-group-vertical">
-                    <div class="btn-group me-3" role="group" aria-label="Second group">
-                   <!-- <input class="btn btn-primary clearButton" type="button"  id="AC" onclick="clearInput()" value="AC"> -->
+                   <div class="btn-group-vertical">
+
+                <div class="btn-group me-3" role="group" aria-label="Second group">
                    <button type="button" class="btn btn-secondary" id="AC" onclick="clearInput()" >AC</button>
                    <button type="button" class="btn btn-secondary " onclick="writeOpreator('%')">%</button>
                    <button type="button" class="btn btn-secondary" onclick="writeOpreator('/')">÷</button>
-                   <button type="button" class="btn btn-secondary"  onclick="deleteLastChar()"> <i class="bi bi-backspace"></i></button>
-                    </div>
-                   <div class="btn-group me-3" role="group" aria-label="Second group">
+                   <button type="button" class="btn btn-secondary" id="deleteBtn" onclick="deleteLastChar()" disabled> <i class="bi bi-backspace"></i></button>
+                </div>
+
+                <div class="btn-group me-3" role="group" aria-label="Second group">
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('7')">7</button>
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('8')">8</button>
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('9')">9</button>
                    <button type="button" class="btn btn-secondary" onclick="writeOpreator('*')">×</button>
-                   </div>
-                   <div class="btn-group me-3" role="group" aria-label="Second group">
+                </div>
+
+                <div class="btn-group me-3" role="group" aria-label="Second group">
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('4')">4</button>
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('5')">5</button>
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('6')">6</button>
                    <button type="button" class="btn btn-secondary" onclick="writeOpreator('-')">-</button>
                 </div>
+
                 <div class="btn-group me-3" role="group" aria-label="Second group">
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('1')">1</button>
                    <button type="button" class="btn btn-secondary number" onclick="writeNumber('2')">2</button>
-                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('4')">3</button>
+                   <button type="button" class="btn btn-secondary number" onclick="writeNumber('3')">3</button>
                    <button type="button" class="btn btn-secondary" onclick="writeOpreator('+')">+</button>
                 </div>
+
                 <div class="btn-group me-3" role="group" aria-label="Second group">
                    <button type="button" class="btn btn-secondary number" id="numberzero" onclick="writeNumber('0')">0</button>
                    <button type="button" class="btn btn-secondary"onclick="writeOpreator('.')">.</button>
-                   <button type="button" class="btn btn-secondary" onclick="showResult()" >=</button>
+                   <button type="button" class="btn btn-secondary" onclick="showResult()" id="equalSign" disabled>=</button>
                 </div>
-                   </div>
-                </div>
+                   
+                   </div><!-- end vertical menu -->
+                  
+                </div> <!-- end collapse menu -->
                </form>
               
-               <!-- end col -->
-           </div>
-           <!-- end rwo -->
-       </div>
+              
+         
        <!-- end container -->
     </div> 
     <script src="script.js"></script>
