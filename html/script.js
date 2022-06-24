@@ -1,13 +1,13 @@
 
 function changeBtnAttrbuit(){  
-    //change AC to C if there is something to clear 
+    //change C btn to able if there is something to clear 
     //and change delete button to able if there is something to delete  
 if(document.querySelector("#display").value == " "||document.querySelector("#display").value.length==0){
-    document.getElementById("AC").innerHTML='AC';
+    document.getElementById("C").disabled = true; 
     document.getElementById("deleteBtn").disabled = true; 
   } 
  else {// there is somthing to be clear/delete
-    document.getElementById("AC").innerHTML=' C';
+    document.getElementById("C").disabled = false; 
     document.getElementById("deleteBtn").disabled = false; 
 }
 
@@ -41,7 +41,7 @@ function writeNumber(Number){
 // opreater functions 
 function writeOpreator(opreater){
     document.querySelector("#display").value= document.querySelector("#display").value +opreater;
-    changeBtnAttrbuit()
+    changeBtnAttrbuit();
 }
 
 // delete button
